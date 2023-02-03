@@ -1,5 +1,141 @@
-<div class = 'home-page'>
-    <p>
-        <b>Welcome to the Home page of SW360 !</b>
-    </p>
+<div class = 'container-fluid home-page'>
+    <div class="row">
+        <div class="col col-md-10">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="d-flex justify-content-between title">
+                            <div class="d-flex">
+                                <h5 class="fw-bold">My Projects</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li class="mx-5">
+                                            <h6 class="text-capitalize fw-bolder">Role in Project</h6>
+                                        </li>
+                                        <li><hr></li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="creator" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="creator">Creator</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="moderator" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="moderator">moderator</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="contributor" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="contributor">contributor</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="projectOwner" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="projectOwner">project owner</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="leadArchitect" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="leadArchitect">lead architect</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="projectResponsible" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="projectResponsible">project responsible</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="securityResponsible" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="securityResponsible">security responsible</label>
+                                            </div>
+                                        </li>
+                                        <li><hr></li>
+                                        <li class="mx-5">
+                                            <h6 class="text-capitalize fw-bolder">clearing state</h6>
+                                        </li>
+                                        <li><hr></li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="open" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="open">open</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="closed" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="closed">closed</label>
+                                            </div>
+                                        </li>
+                                        <li class="mx-5">
+                                            <div class="form-check dropdown-item">
+                                                <input class="form-check-input" type="checkbox" value="" id="inProgress" />
+                                                <label class="form-check-label fw-bold text-capitalize fs-6" for="inProgress">in progress</label>
+                                            </div>
+                                        </li>
+                                        <li><hr></li>
+                                        <li>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-md btn-primary me-2 fw-bold text-capitalize" data-bs-toggle="modal" data-bs-target="#exampleModal">Search</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <app-table [table]="projects"></app-table>
+                </div>
+                <div class="col-sm">
+                    <div class="d-flex justify-content-between title">
+                        <h5 class="fw-bold">My Components</h5>
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <app-table [table]="components"></app-table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="d-flex justify-content-between title">
+                        <h5 class="fw-bold">My Task Assignments</h5>
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <app-table [table]="taskAssignments"></app-table>
+                </div>
+                <div class="col-sm">
+                    <div class="d-flex justify-content-between title">
+                        <h5 class="fw-bold">My Task Submissions</h5>
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <app-table [table]="taskSubmissions"></app-table>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-2">
+            <div class="mb-4">
+                <h5 class="fw-bold title">My Subscriptions</h5>
+                <div class="alert alert-primary" role="alert">
+                    No subscriptions available.
+                </div>
+            </div>
+            <div class="mb-4">
+                <h5 class="fw-bold title">Recent Components</h5>
+                <div class="alert alert-primary" role="alert">
+                    No recent components.
+                </div>
+            </div>
+            <div class="mb-4">
+                <h5 class="fw-bold title">Recent Subscriptions</h5>
+                <div class="alert alert-primary" role="alert">
+                    No recent subscriptions.
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
