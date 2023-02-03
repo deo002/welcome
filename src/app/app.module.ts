@@ -7,13 +7,15 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
